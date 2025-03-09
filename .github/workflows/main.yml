@@ -28,8 +28,8 @@ jobs:
         pip install gym
         pip install -r requirements.txt
 
-    - name: 3. Grant execution permission to eval.bin
-      run: chmod +x eval.bin  # 確保 eval.bin 可以執行
+    - name: 3. Ensure env.so is executable
+      run: chmod +x env.so  # 確保 env.so 可讀取
 
-    - name: 4. Running your code
-      run: ./eval.bin --token a91aae52cff9ef65932db06b150ffd47  # 執行 eval.bin
+    - name: 4. Run Evaluation
+      run: python edit_eval.py --token a91aae52cff9ef65932db06b150ffd47  # 直接執行 edit_eval.py
