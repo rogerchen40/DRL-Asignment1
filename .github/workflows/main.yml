@@ -32,4 +32,4 @@ jobs:
       run: chmod +x env.cpython-38-x86_64-linux-gnu.so  # 確保 env.so 可讀取
 
     - name: 4. Run Evaluation
-      run: python edit_eval.py --token a91aae52cff9ef65932db06b150ffd47  # 直接執行 edit_eval.py
+      run: python eval.py --token a91aae52cff9ef65932db06b150ffd47  # 直接執行 edit_eval.py
