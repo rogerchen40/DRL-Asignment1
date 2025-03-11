@@ -23,6 +23,15 @@ def get_action(obs):
     Given an observation, use the loaded Q-table to select an action.
     If the observation key is missing, choose a random action as a fallback.
     """
+    print(np.__version__)  # 檢查 NumPy 版本
+    try:
+        q_table = np.load("q_table.pkl", allow_pickle=True)
+        print("成功讀取 q_table.pkl")
+        print(q_table)
+    except Exception as e:
+        print("讀取失敗：", e)
+    
+    
     # Load Q-table if not already loaded.
     qt = load_q_table()
     
